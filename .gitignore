@@ -1,16 +1,63 @@
+# REDSOFT.PRO, 2013
+#
+# gitignore − Specifies intentionally untracked files to ignore
+# $GIT_DIR/info/exclude, .gitignore
+
+
+# common ignore
+*~
+MANIFEST.MF
+target/
+
+pom.xml.orig
+*.versionsBackup
+
+# eclipse specific
+.settings
+.settings/
+.project
+.classpath
+.metadata
+
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+
+# unix specific
+.DS_Store
+/*.*/.DS_Store
+.directory
+
+
+# static plugins
+.pmd
+
+
+# java specific
 *.class
 
-# Package Files #
-*.jar
+
+# logging
+velocity.log
+velocity.log.*
+
+
+# gwt specific, caches and compiled units, boilerplate generated classes
 *.war
-
-# gwt caches and compiled units #
 war/gwt_bree/
-gwt-unitCache/
-
-# boilerplate generated classes #
+gwt-unitCache
 .apt_generated/
-
-# more caches and things from deploy #
 war/WEB-INF/deploy/
 war/WEB-INF/classes/
+/www-test
+/war
+.gwt
+
+
+# application specific
+src/main/webapp/TomcatAdmin
+src/main/webapp/WEB-INF/deploy
+src/main/webapp/WEB-INF/lib
+src/main/webapp/META-INF/maven
+format/**.*
